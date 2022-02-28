@@ -1,0 +1,77 @@
+# shortcut from productivity README
+(normal-mode) align markdown/latex symbols (e.g. =)                                      | :Tabularize /=
+(normal-mode) jump on that character                                                     | f + character
+(normal-mode) jump before that character                                                 | t + character
+(normal-mode)repeat forward jump                                                         | ;
+(normal-mode)repeat backward jump                                                        | ,
+(normal-mode)jump to matching bracket                                                    | %
+(visual-mode) capitalize selected                                                        | <S-u>
+go to file                                                                               | <c-w>f
+jump / toggle between two last buffers                                                   | ^ (i.e. <S-6>)
+delete and enter insert mode                                                             | c + {movement} (e.g. cw)
+
+# packages & (mostly remapped) key bindings in .vim_runtime/vimrcs/basic.vim
+[tcomment] comment selected visual block                                                 | cmd + \ (remapped)
+[fzf] search files                                                                       | <C-f>
+[fzf] search strings in many files                                                       | <C-g>
+[fzf] search strings in this file                                                        | <C-l>
+[tag-bar] toggle tag bar to see functions/defs in a file                                 | <leader>tt
+[vim-sneak] vertical jump to word                                                        | s + two chars
+[vim-fugitive] git status                                                                | <leader>gs
+[vim-fugitive] git commit                                                                | <leader>gc
+[vim-fugitive] git push                                                                  | <leader>gp
+[vim-fugitive] see diff of file under cursor                                             | dd
+[vim-fugitive] jump to next diff in file                                                 | ]c
+[vim-fugitive] jump to prev diff in file                                                 | [c
+[vim-fugitive] resolve merge conflict, get code from left (see primeagen)                | <leader>gf
+[vim-fugitive] resolve merge conflict, get code from right (see primeagen)               | <leader>gj
+[coc-snippets] expand snippets                                                           | <c-l>
+[coc] go to definition                                                                   | gd
+[coc] go to definition in new pane                                                       | gD
+[coc] highlight references under cursor in this project (shown in horizontal split pane) | gr
+[coc] search symbols/references  across files (shown in vertical split pane)             | <leader>f
+[coc] show domentation                                                                   | K (i.e. <S-k>)
+[coc] highlight word under cursor and references within file                             | *
+[coc] rename symbol                                                                      | <leader>r
+[coc] code action                                                                        | <leader>a + {movement} (e.g. <leader>aw)
+[coc] select function (conjunction with visual or delete)                                | "if" or "af" (e.g. daf delete current function)
+[coc] select class (conjunction with visual or delete)                                   | "ic" or "ac" (e.g. daf delete current function)
+[coc] jump to next error                                                                 | ]e
+[coc] jump to prev error                                                                 | [e
+[coc] open CocDiagnostics                                                                | <leader>d
+[coc-explorer] open file explorer                                                        | cmd + b
+[coc-explorer] rename file                                                               | r
+[coc-explorer] new file                                                                  | a
+[coc-explorer] new folder                                                                | A
+[coc-explorer] delete file/directory                                                     | df
+[coc-explorer] fuzzy search / find commands                                              | <tab>
+[vimtex] compile latex                                                                   | \ll
+new terminal vertical                                                                    | <leader>tv
+new terminal horizontal                                                                  | <leader>ts
+next split pane                                                                          | <leader>n
+go to right pane                                                                         | <leader>l
+go to left pane                                                                          | <leader>h
+go to top pane                                                                           | <leader>k
+go to bottom pane                                                                        | <leader>j
+open vertical pane                                                                       | <leader>v
+open horizontal pane                                                                     | <leader>s
+close current buffer & tab                                                               | <leader>bf
+open new tab with no file                                                                | <leader>tn
+close all other tabs except current                                                      | <leader>to
+open a new tab with a provided file                                                      | <leader>te
+toggle spelling check                                                                    | <leader>ss
+delete / remove search highlighting                                                      | <ESC> <ESC>
+
+resize vertical window/pane larger  (increase)                                           | =
+resize vertical window/pane smaller (decrease)                                           | -
+resize horizontal window/pane larger  (increase)                                         | <leader>+
+resize horizontal window/pane smaller  (decrease)                                        | <leader>-
+
+moving selected blocks code up                                                           | option + k
+moving selected blocks code down                                                         | option + j
+
+quit vim :q!                                                                             | <leader>q
+save vim :w                                                                              | <leader>w
+
+# .config/nvim/init.vim
+[nabla] preview math equations                                                           | <leader>p
