@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/longle/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/longle/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["darkplus.nvim"] = {
     loaded = true,
     path = "/Users/longle/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
