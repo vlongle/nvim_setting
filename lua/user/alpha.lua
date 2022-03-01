@@ -20,7 +20,7 @@ dashboard.section.buttons.val = {
   dashboard.button(
     "p",
     icons.git.Repo .. " Find project",
-    ":lua require('telescope').extensions.projects.projects()<CR>"
+    ":lua require('telescope').extensions.project.project{}<CR>"
   ),
   dashboard.button("r", icons.ui.History .. " Recent files", ":Telescope oldfiles <CR>"),
   dashboard.button("t", icons.ui.List .. " Find text", ":Telescope live_grep <CR>"),

@@ -122,7 +122,14 @@ telescope.setup {
 telescope.load_extension "ui-select"
 telescope.load_extension "file_browser"
 telescope.load_extension('fzf')
+telescope.load_extension('project')
 
+vim.api.nvim_set_keymap(
+    'n',
+    '<C-p>',
+    ":lua require'telescope'.extensions.project.project{}<CR>",
+    {noremap = true, silent = true}
+)
 
 vim.cmd([[
 " Find files using Telescope command-line sugar.
