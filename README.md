@@ -16,3 +16,12 @@ After moving fonts to `~/.local/share/fonts/`
 
 Run: `$ fc-cache -f -v`
 
+Coc requires ripgrep to do "search".
+
+In order to use these nvim plugins in a large codebase (e.g. Google), we should make sure to localize our search to only the current working directory.
+- disable vim-rooter
+- add `"coc.preferences.rootPatterns":[]` to CocConfig to overwrite the default behavior of coc, which searches for .git for instance to set the root directory.
+
+Also, we have to do `set notermguicolors` to vim config when using `mosh` (much faster version of `ssh`) since mosh doesn't support true-color.
+
+Need to install `ctags` as well

@@ -102,6 +102,10 @@ use {
   event = 'VimEnter', -- https://github.com/lewis6991/gitsigns.nvim/issues/389. Otherwise it produces an error when a :Git buffer is open.
 }
 use { 'github/copilot.vim' }
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 --
 --
 --
