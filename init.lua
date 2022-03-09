@@ -17,4 +17,4 @@ require ( 'user.bufferline'  )
 require ( 'user.gps'         )
 require ( 'user.alpha'       )
 require ('user.telescope')
-require ('user.coc')
+
