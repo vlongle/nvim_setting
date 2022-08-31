@@ -31,6 +31,7 @@ packer.init({
   }
 )
 
+
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
@@ -58,12 +59,16 @@ return packer.startup(function(use)
   use "andymass/vim-matchup" -- extend % to language specific
 -- https://github.com/SmiteshP/nvim-gps/issues/59
 -- Run :TSInstall python
-  use {
-	"SmiteshP/nvim-gps",
-	requires = "nvim-treesitter/nvim-treesitter"
+--   use {
+-- 	"SmiteshP/nvim-gps",
+-- 	requires = "nvim-treesitter/nvim-treesitter"
+-- }
+-- WARNING: nvim-gps is deprecated and replaced by nvim-navic
+use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
 }
-
-  use "lukas-reineke/indent-blankline.nvim"
+  use "lukas-reineke/indent-blankline.nvim" -- sick indent Python
   use "karb94/neoscroll.nvim"
   use {
   "folke/todo-comments.nvim",
@@ -94,24 +99,26 @@ return packer.startup(function(use)
 
 --  use { 'lewis6991/gitsigns.nvim' }
 -- <leader>hb to blame line, ]c & [c to move between hunks (changes)
+-- use {
+--   'lewis6991/gitsigns.nvim',
+--   config = function() require('gitsigns').setup() end,
+--   requires = 'nvim-lua/plenary.nvim',
+--   tag = 'release',
+--   event = 'VimEnter', -- https://github.com/lewis6991/gitsigns.nvim/issues/389. Otherwise it produces an error when a :Git buffer is open.
+-- }
+--
 use {
   'lewis6991/gitsigns.nvim',
-  config = function() require('gitsigns').setup() end,
-  requires = 'nvim-lua/plenary.nvim',
-  tag = 'release',
-  event = 'VimEnter', -- https://github.com/lewis6991/gitsigns.nvim/issues/389. Otherwise it produces an error when a :Git buffer is open.
+  config = function()
+    require('gitsigns').setup()
+  end
 }
 use { 'github/copilot.vim' }
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
---
---
---
---
---
---
+-- use {
+--         'nvim-treesitter/nvim-treesitter',
+--         run = ':TSUpdate'
+--     }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

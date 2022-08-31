@@ -62,7 +62,7 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
-local gps = require("nvim-gps")
+local gps = require("nvim-navic")
 
 
 lualine.setup({

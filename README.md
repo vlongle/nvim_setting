@@ -16,7 +16,7 @@ After moving fonts to `~/.local/share/fonts/`
 
 Run: `$ fc-cache -f -v`
 
-Coc requires ripgrep to do "search".
+Coc \& Telescope require ripgrep to do "search".
 
 In order to use these nvim plugins in a large codebase (e.g. Google), we should make sure to localize our search to only the current working directory.
 - disable vim-rooter
